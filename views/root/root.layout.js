@@ -1,6 +1,7 @@
 var Mn = require('backbone.marionette');
+// var $ = require('jquery');
 require('backbone.stickit');
-console.log(require('./root.layout.html'));
+
 
 var RootLayout = Mn.LayoutView.extend({
 	el: '#app-container',
@@ -9,12 +10,9 @@ var RootLayout = Mn.LayoutView.extend({
 		'#name': 'name'
 	},
 	onRender: function () {
-		console.log('on render');
-		this.stickit();
-
-	},
-	onShow: function () {
-
+		if(this.model) {
+			this.stickit();
+		}
 		
 	}
 });

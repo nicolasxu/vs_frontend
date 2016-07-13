@@ -1,5 +1,7 @@
 var Mn = require('backbone.marionette');
-
+var RootLayout = require('../views/root/root.layout.js');
+var LoginLayout = require('../views/login/login.layout.js');
+// var SignupLayout = require('../views/signup/')
 var Router = Mn.AppRouter.extend({
 	routes: {
 		'': 'default',
@@ -12,6 +14,9 @@ var Router = Mn.AppRouter.extend({
 	// below are route functions
 	default: function () {
 		console.log('this is default route');
+		var rl = new RootLayout();
+		rl.render();
+
 	}, 
 	login: function () {
 		console.log('this is login route');
