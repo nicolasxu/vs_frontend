@@ -1,9 +1,10 @@
 var Mn = require('backbone.marionette');
 require('backbone.stickit');
 var $ = require('jquery');
-var LoginLayout = Mn.LayoutView.extend({
+
+var SignupLayout = Mn.LayoutView.extend({
 	el: '#app-container',
-	template: require('./login.layout.html'),
+	template: require('./signup.layout.html'),
 	bindings: {},
 	onRender: function() {
 		if(this.model) {
@@ -12,4 +13,7 @@ var LoginLayout = Mn.LayoutView.extend({
 	}
 });
 
-module.exports = LoginLayout;
+
+module.exports = SignupLayout;
+
+

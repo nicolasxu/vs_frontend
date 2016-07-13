@@ -1,6 +1,7 @@
 var Mn = require('backbone.marionette');
 var RootLayout = require('../views/root/root.layout.js');
 var LoginLayout = require('../views/login/login.layout.js');
+var SignupLayout = require('../views/signup/signup.layout.js');
 // var SignupLayout = require('../views/signup/')
 var Router = Mn.AppRouter.extend({
 	routes: {
@@ -19,9 +20,13 @@ var Router = Mn.AppRouter.extend({
 
 	}, 
 	login: function () {
+		var ll = new LoginLayout();
+		ll.render();
 		console.log('this is login route');
 	},
 	signup: function () {
+		var sl = new SignupLayout();
+		sl.render();
 		console.log('this is signup route');
 	}
 });

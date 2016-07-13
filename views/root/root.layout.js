@@ -13,7 +13,6 @@ var RootLayout = Mn.LayoutView.extend({
 		if(this.model) {
 			this.stickit();
 		}
-		
 	}
 });
 
