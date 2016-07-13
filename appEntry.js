@@ -3,7 +3,7 @@ var Mn = require('backbone.marionette');
 require('bootstrap-loader'); // load bootstrap 3
 require('./scss/style.scss');
 var Router = require('./routes/routes.js');
-var RootView = require('./views/root/root.js');
+var RootLayout = require('./views/root/root.layout.js');
 
 
 var Author = Backbone.Model.extend({
@@ -11,13 +11,13 @@ var Author = Backbone.Model.extend({
 		console.log('initializing Author model...');
 	}
 });
-var author = new Author({name: 'Nicolas Xu'})
+var author = new Author({name: 'Nicolas Xu'});
 
 var app = new Mn.Application();
 app.on('start', function(options) {
 	var router = new Router();
 	Backbone.history.start();
-	var rv = new RootView({model: author});
+	var rv = new RootLayout({model: author});
 	rv.render();
 
 });

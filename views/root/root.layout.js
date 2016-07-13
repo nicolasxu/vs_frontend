@@ -1,9 +1,10 @@
 var Mn = require('backbone.marionette');
 require('backbone.stickit');
+console.log(require('./root.layout.html'));
 
-var RootView = Mn.LayoutView.extend({
+var RootLayout = Mn.LayoutView.extend({
 	el: '#app-container',
-	template: '<div><h1 id="name">this is root view111</h1> is great</div>',
+	template: require('./root.layout.html'),
 	bindings: {
 		'#name': 'name'
 	},
@@ -13,13 +14,11 @@ var RootView = Mn.LayoutView.extend({
 
 	},
 	onShow: function () {
-		console.log('after render');
-		alert('fdsf');
-		this.stickit();
+
 		
 	}
 });
 
-module.exports = RootView;
+module.exports = RootLayout;
 
 

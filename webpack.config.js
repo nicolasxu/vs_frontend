@@ -22,14 +22,14 @@ module.exports = {
 	devtool: 'source-map', // enable source map
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
-		new HtmlWebpackPlugin({template: 'html!index.html'}),
+		new HtmlWebpackPlugin({template: 'index.html'}),
 		// new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}})
 	], 
 	module: {
 		loaders: [
 			{test: /\.scss$/, loader: 'style!css!sass'}, 
 			{test: /\.css$/, loader: 'style!css'},
-			{test: /\.html$ /, loader: 'raw'},
+			{test: /\.html$/, loader: 'raw'},
 			{
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "url?limit=10000" 
