@@ -27,7 +27,7 @@ var Router = Mn.AppRouter.extend({
 	signup: function () {
 		var sl = new SignupLayout();
 		sl.render();
-		console.log('this is signup route');
+
 	}
 });
 
