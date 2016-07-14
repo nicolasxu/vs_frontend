@@ -14,14 +14,12 @@ var User = Backbone.Model.extend({
 	}, 
 	signup: function () {
 		var userJson = {email: this.get('email'), password: this.get('password')};
-		api.user.signup(userJson)
-			.then(function (res) {
-				console.log('result of signup: ');
-				console.log(res);
-			});
+		return api.user.signup(userJson);
 	},
 	login: function () {
 		console.log('loging...');
+		var userJson = {email: this.get('email'), password: this.get('password')};
+		return api.user.login(userJson);
 	},
 	validate_email: function () {
 		/*
