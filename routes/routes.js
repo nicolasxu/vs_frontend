@@ -20,8 +20,11 @@ var Router = Mn.AppRouter.extend({
 
 	}, 
 	login: function () {
-		var ll = new LoginLayout();
-		ll.render();
+		if(!this.ll) {
+			this.ll = new LoginLayout();
+		}
+		
+		this.ll.render();
 
 	},
 	signup: function () {

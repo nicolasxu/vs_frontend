@@ -29,6 +29,7 @@ var LoginLayout = Mn.LayoutView.extend({
 			this.stickit();
 
 		}
+		this.model.set({email:'', password:'', message:''});
 		$('#login-msg', this.$el).hide();
 	},
 	events: {
@@ -37,9 +38,10 @@ var LoginLayout = Mn.LayoutView.extend({
 			var thisView = this;
 			this.model.login()
 				.then(function(result) {
-					console.log(result)
 					if(result.code === 2000) {
 						data.user = result.user;
+						// clear value
+
 						// TODO: naviaget to dash board
 						Backbone.history.navigate('/signup', true);
 					} else {
