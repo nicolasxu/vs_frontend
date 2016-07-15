@@ -41,9 +41,9 @@ var LoginLayout = Mn.LayoutView.extend({
 					if(result.code === 2000) {
 						data.user = result.user;
 						// clear value
-
+						console.log('login success...');
 						// TODO: naviaget to dash board
-						Backbone.history.navigate('/signup', true);
+						Backbone.history.navigate('/dashboard', true);
 					} else {
 						// update result to dom
 						$('#login-msg', thisView.$el).show();
