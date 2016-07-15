@@ -4,21 +4,19 @@ var api = require('./_api.js');
 
 var User = Backbone.Model.extend({
 	initialize: function () {
-		console.log('initializing Author model...');
-		// this.on('change:email', function (evt) {
-		// 	console.log(evt);
-		// });
+	
 	},
 	validate: function () {
-		console.log('validing user');
+
 	}, 
 	signup: function () {
 		var userJson = {email: this.get('email'), password: this.get('password')};
 		return api.user.signup(userJson);
 	},
 	login: function () {
-		console.log('loging...');
+		console.log('login...');
 		var userJson = {email: this.get('email'), password: this.get('password')};
+
 		return api.user.login(userJson);
 	},
 	validate_email: function () {
