@@ -10,6 +10,9 @@ module.exports = {
 		},
 		getInfo: function() {
 			return request.get('http://localhost:3000/user');
+		},
+		logout: function () {
+			return request.delete('http://localhost:3000/credential');
 		}
 	},
 	company: {},
