@@ -15,7 +15,11 @@ module.exports = {
 			return request.delete('http://localhost:3000/credential');
 		}
 	},
-	company: {},
+	company: {
+		getInfo: function () {
+			return request.get('http://localhost:3000/company');
+		}
+	},
 	client: {},
 	vendor: {},
 	request: {},

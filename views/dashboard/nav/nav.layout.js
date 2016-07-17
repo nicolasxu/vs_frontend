@@ -11,11 +11,14 @@ var NavLayout = Mn.LayoutView.extend({
 	onRender: function() {
 
 	},
-	event: {
-
+	events: {
+		'click #sent-link': function (e) {
+			e.preventDefault();
+			alert('sent-link')
+		}
 	}, 
 	onAttach: function () {
-		console.log('attaching NavLayout...');
+		// exclusive region event, only triggered by parentView.show() method
 	}
 });
 

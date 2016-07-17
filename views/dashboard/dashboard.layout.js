@@ -7,32 +7,40 @@ var Nav = require('./nav/nav.layout.js');
 
 var DashboardLayout = Mn.LayoutView.extend({
 	initialize: function () {
-		// called only when new operator is used
-		// this.on('showChildren', this.onShowChildren);
 	},
 	el: '#app-container',
 	template: require('./dashboard.layout.html'),
 	regions: {
-		// header: '#vs-header-region',
-		// nav: '#vs-nav-region',
-		// content: '#vs-content-region'
 
-		/* Build region is only trigger during the new */
+		/* Building region is only trigger during the new */
 	},
 	onBeforeRender: function () {
 		var thisView = this; 
 		// check if user is login
-		api.user.getInfo()
-			.then(function(result){
+		// api.user.getInfo()
+		// 	.then(function(result){
 
+		// 		if(result.code !== 2000) {
+		// 			// not login, or can't find user
+		// 			Backbone.history.navigate('/login', true);
+		// 		} else {
+		// 			appData.user = result.user;
+
+		// 		}
+		// 	});
+		api.company.getInfo()
+			.then(function(result){
+				console.log(result);
 				if(result.code !== 2000) {
 					// not login, or can't find user
 					Backbone.history.navigate('/login', true);
 				} else {
-					appData.user = result.user;
-
+					if(!result.company) {
+						// TODO: show model dialog
+						console.log(result);
+					}
 				}
-			})
+			});
 	},
 	onRender: function () {
 		this.addRegion('nav', '#vs-nav-region');
@@ -43,10 +51,6 @@ var DashboardLayout = Mn.LayoutView.extend({
 		var navRegion = this.getRegion('nav');
 
 		navRegion.show( ss);
-	},
-	onBeforeShow: function () {
-
-
 	}
 });
 
