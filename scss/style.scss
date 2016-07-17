@@ -1,7 +1,10 @@
 @import './utilities.scss';
+@import './nav_region.scss';
 
-body {
-	// background-color: yellow;
+$nav_bar_width: 220px; 
+
+#app-container {
+	height: 100vh;
 }
 
 .signup-box {
@@ -12,5 +15,34 @@ body {
 	width: 400px;
 	.login-return-msg-box {
 		padding: 15px;
+	}
+}
+
+// dashboard layout
+.dashboard {
+	height: 100vh;
+	#vs-header-region {
+		height: 65px;
+		border-bottom: 1px solid rgba(0,0,0,.05);
+	}
+	.main-wrapper {
+		position: absolute;
+		top: 65px;
+		bottom: 0;
+		width: 100%;
+		#vs-nav-region {
+			position: fixed;
+			top: 65px;
+			bottom: 0;
+			width: $nav_bar_width;
+		}
+		#vs-content-region {
+			background-color: orange;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: $nav_bar_width;
+		}
 	}
 }
