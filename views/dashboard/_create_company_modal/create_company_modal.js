@@ -6,7 +6,9 @@ var appData = require('../../../routes/_data.js');
 
 // js code for create company modal dialog
 var CreateCompanyLayout = Mn.LayoutView.extend({
-	initialize: function () {},
+	initialize: function () {
+
+	},
 	template: require('./create_company_modal.html'),
 	events: {
 
@@ -15,7 +17,11 @@ var CreateCompanyLayout = Mn.LayoutView.extend({
 		$('#myModal').modal('show');
 	},
 	hideModal: function () {
-		$('#myModal').modal('hide');
+		$('#myModal').modal('toggle');
+	},
+	onBeforeDestroy: function () {
+		console.log('modal onBeforeDestroy');
+		this.hideModal();
 	}
 });
 

@@ -5,6 +5,8 @@ var SignupLayout = require('../views/signup/signup.layout.js');
 var DashboardLayout = require('../views/dashboard/dashboard.layout.js');
 var appData = require('./_data.js');
 
+var AppLayout = require('../views/app/app.layout.js');
+
 var Router = Mn.AppRouter.extend({
 	routes: {
 		'': 'default',
@@ -15,42 +17,39 @@ var Router = Mn.AppRouter.extend({
 	}, 
 	initialize: function () {
 		var initData = this.getOption('keyInOptions');
-	
+		if(!this.app) {
+			this.app = new AppLayout();
+			this.app.render();
+		}
 	},
 	// below are route functions
 	default: function () {
 
-		if(!this.rl) {
-			this.rl = new RootLayout();
-		}
-		this.rl.render();
+		this.app.showChildView('app_region', new RootLayout());
 	}, 
 	login: function () {
 		// if you new it every time the route is triggered,
 		// multiple event binding will happen. 
 		// Because it is not managed by region manager, so 
 		// root view is not properly destroyed. 
-		if(!this.ll) {
-			this.ll = new LoginLayout();
-		}
-		
-		this.ll.render();
+
+		this.app.showChildView('app_region', new LoginLayout());
 
 	},
 	signup: function () {
-		if(!this.sl) {
-			this.sl = new SignupLayout();
-		}
-		this.sl.render();
+
+		this.app.showChildView('app_region', new SignupLayout());
 	},
 	sent: function () {
-		if(!this.dl) {
-			this.dl = new DashboardLayout();
-		}
-		this.dl.render();
+
+		this.app.showChildView('app_region', new DashboardLayout());
 	},
 	onRoute: function (name, path, args ) {
-
+		if(name === 'default' || name === 'signup') {
+			// don't check login for root page
+			return;
+		}
+		
 		if(appData.isLogin === false ) {
 			Backbone.history.navigate('/login', true);
 		}

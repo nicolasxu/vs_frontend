@@ -10,7 +10,7 @@ var CreateCompanyModal = require('./_create_company_modal/create_company_modal.j
 var DashboardLayout = Mn.LayoutView.extend({
 	initialize: function () {
 	},
-	el: '#app-container',
+	// el: '#app-container',
 	template: require('./dashboard.layout.html'),
 	regions: {
 		/* Building region is only trigger during the new */
@@ -24,20 +24,26 @@ var DashboardLayout = Mn.LayoutView.extend({
 		this.addRegion('content', '#vs-content-region');
 		this.addRegion('modal', '#vs-modal');
 
-
 		this.showChildView('nav', new Nav());
 
-		console.log('onRender dashboard.js');
+
+	},
+	onShow: function() {
+
 		// pop the dialog
 		if(appData.isLogin && !appData.company) {
 			var ccModal = new CreateCompanyModal();
 			this.modal.show(ccModal);
 			ccModal.showModal();
 		} 
-		console.log(appData);
+
+	},
+	onBeforeDestroy: function () {
+
 	},
 	onDestroy: function () {
-		console.log('dashboard onDestory...');
+
+
 	}
 });
 

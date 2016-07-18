@@ -4,7 +4,7 @@ require('backbone.stickit');
 var api = require('../../models/_api.js');
 
 var RootLayout = Mn.LayoutView.extend({
-	el: '#app-container',
+	// el: '#app-container',
 	template: require('./root.layout.html'),
 	bindings: {
 		'#name': 'name'

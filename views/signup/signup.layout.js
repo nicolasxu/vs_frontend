@@ -78,7 +78,7 @@ var SignupLayout = Mn.LayoutView.extend({
 		});
 
 	},
-	el: '#app-container',
+	// el: '#app-container',
 	template: require('./signup.layout.html'),
 	bindings: {
 		'#InputEmail': 'email',

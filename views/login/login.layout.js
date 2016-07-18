@@ -14,7 +14,7 @@ var LoginLayout = Mn.LayoutView.extend({
 
 		// bind model change to validation function
 	},
-	el: '#app-container',
+	// el: '#app-container',
 	template: require('./login.layout.html'),
 	bindings: {
 		'#InputEmail': 'email',
