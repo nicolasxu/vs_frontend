@@ -2,7 +2,7 @@ var Mn = require('backbone.marionette');
 require('backbone.stickit');
 var $ = require('jquery');
 var User = require('../../models/user.model.js');
-var data = require('../../routes/_data.js');
+var appData = require('../../routes/_data.js');
 var LoginLayout = Mn.LayoutView.extend({
 	initialize: function () {
 		this.model = new User({
@@ -39,10 +39,10 @@ var LoginLayout = Mn.LayoutView.extend({
 			this.model.login()
 				.then(function(result) {
 					if(result.code === 2000) {
-						data.user = result.user;
+						appData.user = result.user;
 						// clear value
-						console.log('login success...');
-						// TODO: naviaget to dash board
+						appData.isLogin = true;
+						// naviaget to dash board
 						Backbone.history.navigate('/dashboard', true);
 					} else {
 						// update result to dom

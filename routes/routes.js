@@ -3,6 +3,8 @@ var RootLayout = require('../views/root/root.layout.js');
 var LoginLayout = require('../views/login/login.layout.js');
 var SignupLayout = require('../views/signup/signup.layout.js');
 var DashboardLayout = require('../views/dashboard/dashboard.layout.js');
+var appData = require('./_data.js');
+
 var Router = Mn.AppRouter.extend({
 	routes: {
 		'': 'default',
@@ -13,6 +15,7 @@ var Router = Mn.AppRouter.extend({
 	}, 
 	initialize: function () {
 		var initData = this.getOption('keyInOptions');
+	
 	},
 	// below are route functions
 	default: function () {
@@ -25,6 +28,8 @@ var Router = Mn.AppRouter.extend({
 	login: function () {
 		// if you new it every time the route is triggered,
 		// multiple event binding will happen. 
+		// Because it is not managed by region manager, so 
+		// root view is not properly destroyed. 
 		if(!this.ll) {
 			this.ll = new LoginLayout();
 		}
@@ -43,6 +48,12 @@ var Router = Mn.AppRouter.extend({
 			this.dl = new DashboardLayout();
 		}
 		this.dl.render();
+	},
+	onRoute: function (name, path, args ) {
+
+		if(appData.isLogin === false ) {
+			Backbone.history.navigate('/login', true);
+		}
 	}
 });
 
