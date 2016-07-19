@@ -1,5 +1,6 @@
 var request = require('./_requester.js');
-
+var appData = require('../routes/_data.js');
+var Promise = require('bluebird');
 module.exports = {
 	user: {
 		signup: function (user) {
@@ -9,7 +10,11 @@ module.exports = {
 			return request.post('http://localhost:3000/credential', user);
 		},
 		getInfo: function() {
-			return request.get('http://localhost:3000/user');
+			if(appData.user) {
+				return new Promise.resolve({user: appData.user});
+			} else {
+				return request.get('http://localhost:3000/user');
+			}
 		},
 		logout: function () {
 			return request.delete('http://localhost:3000/credential');
@@ -17,7 +22,11 @@ module.exports = {
 	},
 	company: {
 		getInfo: function () {
-			return request.get('http://localhost:3000/company');
+			if(appData.company) {
+				return new Promise.resolve({company: appData.company});
+			} else {
+				return request.get('http://localhost:3000/company');
+			}
 		}
 	},
 	client: {},

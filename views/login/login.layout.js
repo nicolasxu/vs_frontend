@@ -3,6 +3,7 @@ require('backbone.stickit');
 var $ = require('jquery');
 var User = require('../../models/user.model.js');
 var appData = require('../../routes/_data.js');
+var api = require('../../models/_api.js');
 var LoginLayout = Mn.LayoutView.extend({
 	initialize: function () {
 		this.model = new User({
@@ -42,8 +43,14 @@ var LoginLayout = Mn.LayoutView.extend({
 						appData.user = result.user;
 						// clear value
 						appData.isLogin = true;
-						// naviaget to dash board
+
+						// api.company.getInfo()
+						// 	.then(function(result){
+						// 		appData.company = result.company;
+						// 	});
 						Backbone.history.navigate('/dashboard', true);
+
+						// naviaget to dash board
 					} else {
 						// update result to dom
 						$('#login-msg', thisView.$el).show();

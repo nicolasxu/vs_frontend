@@ -24,19 +24,21 @@ var DashboardLayout = Mn.LayoutView.extend({
 		this.addRegion('content', '#vs-content-region');
 		this.addRegion('modal', '#vs-modal');
 
+		
+
+
+	},
+	onBeforeShow: function () {
 		this.showChildView('nav', new Nav());
-
-
 	},
 	onShow: function() {
 
 		// pop the dialog
-		if(appData.isLogin && !appData.company) {
+		if(!appData.company) {
 			var ccModal = new CreateCompanyModal();
 			this.modal.show(ccModal);
 			ccModal.showModal();
-		} 
-
+		}
 	},
 	onBeforeDestroy: function () {
 

@@ -4,6 +4,7 @@ var LoginLayout = require('../views/login/login.layout.js');
 var SignupLayout = require('../views/signup/signup.layout.js');
 var DashboardLayout = require('../views/dashboard/dashboard.layout.js');
 var appData = require('./_data.js');
+var api = require('../models/_api.js');
 
 var AppLayout = require('../views/app/app.layout.js');
 
@@ -17,6 +18,7 @@ var Router = Mn.AppRouter.extend({
 	}, 
 	initialize: function () {
 		var initData = this.getOption('keyInOptions');
+
 		if(!this.app) {
 			this.app = new AppLayout();
 			this.app.render();
@@ -41,18 +43,36 @@ var Router = Mn.AppRouter.extend({
 		this.app.showChildView('app_region', new SignupLayout());
 	},
 	sent: function () {
-
-		this.app.showChildView('app_region', new DashboardLayout());
+		var route = this;
+		this.loadBasicData()
+			.then(function(){
+				route.app.showChildView('app_region', new DashboardLayout());
+			});
+	},
+	loadBasicData: function () {
+		// 1. load user data if no,
+		return api.user.getInfo()
+			.then(function(result) {
+				if(result.code === 4008) {
+					appData.isLogin = false; 
+					throw new Error("not login");
+				} else {
+					appData.user = result.user;
+				}
+			})
+			.then(function(){
+				return api.company.getInfo()
+					.then(function(result){
+						appData.company = result.company;
+					});
+			})
+			.catch(function() {
+				// not login
+				Backbone.history.navigate('/login', true);
+			});
 	},
 	onRoute: function (name, path, args ) {
-		if(name === 'default' || name === 'signup') {
-			// don't check login for root page
-			return;
-		}
-		
-		if(appData.isLogin === false ) {
-			Backbone.history.navigate('/login', true);
-		}
+
 	}
 });
 
