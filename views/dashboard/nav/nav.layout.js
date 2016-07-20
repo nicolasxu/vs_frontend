@@ -2,18 +2,22 @@ var Mn = require('backbone.marionette');
 require('backbone.stickit');
 var $ = require('jquery');
 var appData = require('../../../routes/_data.js');
+var Company = require('../../../models/company.model.js');
 
 var NavLayout = Mn.LayoutView.extend({
 	initialize: function () {
+	
+
+	},
+	bindings: {
 
 	},
 	template: require('./nav.layout.html'),
 	onRender: function() {
-	
+		
 	},
 	events: {
 		'click #sent-link': function (e) {
-			// e.preventDefault();
 			alert('sent-link')
 		}
 	}, 
