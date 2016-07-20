@@ -35,7 +35,6 @@ var CreateCompanyLayout = Mn.LayoutView.extend({
 		var thisModel = this;
 		this.model.create()
 			.then(function(result) {
-				console.log(result);
 				if(result.code === 2000) {
 					appData.company = result.company;
 					console.log('create company success');
@@ -43,7 +42,7 @@ var CreateCompanyLayout = Mn.LayoutView.extend({
 				}
 				if(result.code === 4008) {
 					
-					console.log('createCOmpany when user is not login');
+					console.log('createCOmpany - user is not login');
 					Backbone.history.navigate('/login', true);
 				}
 			});

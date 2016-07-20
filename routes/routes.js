@@ -47,6 +47,11 @@ var Router = Mn.AppRouter.extend({
 		this.loadBasicData()
 			.then(function(){
 				route.app.showChildView('app_region', new DashboardLayout());
+			})
+			.catch(function(err){
+				if(err.toString() === "not login") {
+					Backbone.history.navigate('/login', true);
+				}
 			});
 	},
 	loadBasicData: function () {
@@ -54,8 +59,9 @@ var Router = Mn.AppRouter.extend({
 		return api.user.getInfo()
 			.then(function(result) {
 				if(result.code === 4008) {
+					console.log('loadBasicData, not login');
 					appData.isLogin = false; 
-					throw new Error("not login");
+					throw new Error("not login"); 
 				} else {
 					appData.user = result.user;
 				}
@@ -65,10 +71,6 @@ var Router = Mn.AppRouter.extend({
 					.then(function(result){
 						appData.company = result.company;
 					});
-			})
-			.catch(function() {
-				// not login
-				Backbone.history.navigate('/login', true);
 			});
 	},
 	onRoute: function (name, path, args ) {

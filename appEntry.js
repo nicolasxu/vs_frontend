@@ -3,8 +3,11 @@ var $ = require('jquery');
 var Mn = require('backbone.marionette');
 require('bootstrap-loader'); // load bootstrap 3
 require('./scss/style.scss');
-require('file?name=[name].[ext]!./img/favicon.ico');
-require('file?name=[name].[ext]!./img/spider-web.svg');
+// require('file?name=[name].[ext]!./img/favicon.ico');
+// require('file?name=[name].[ext]!./img/spider-web.svg');
+require('./img/favicon.ico');
+require('./img//spider-web.svg');
+
 var Router = require('./routes/routes.js');
 
 var api = require('./models/_api.js');
@@ -18,18 +21,7 @@ app.on('start', function(options) {
 
 $(document).ready(function(){
 
-	api.company.getInfo()
-		.then(function(result){
-			if(result.code !== 2000) {
-				appData.isLogin = false; 
-			} else {
-				appData.company = result.company;
-				appData.isLogin = true; 
-			}
-			app.start();
-			console.log(result);
-
-		})
+	app.start();
 
 });
 
