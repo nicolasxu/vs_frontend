@@ -1,8 +1,9 @@
+$nav_bar_width: 220px; 
 @import './utilities.scss';
 @import './nav_region.scss';
 @import './dashboard.header.scss';
 
-$nav_bar_width: 220px; 
+
 
 #app-container {
 	height: 100vh;
@@ -38,7 +39,7 @@ $nav_bar_width: 220px;
 			width: $nav_bar_width;
 		}
 		#vs-content-region {
-			background-color: orange;
+			// background-color: orange;
 			position: absolute;
 			top: 0;
 			bottom: 0;

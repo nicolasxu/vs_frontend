@@ -41,7 +41,7 @@ var CreateCompanyLayout = Mn.LayoutView.extend({
 					thisModel.hideModal();
 				}
 				if(result.code === 4008) {
-					
+					thisModel.hideModal();
 					console.log('createCOmpany - user is not login');
 					Backbone.history.navigate('/login', true);
 				}

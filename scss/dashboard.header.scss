@@ -1,3 +1,31 @@
 #vs-header-region {
-	background-color: green;
+	position: relative;
+	z-index: 1;
+
+	.vs-logo {
+		float: left;
+		margin-top: 12px;
+		margin-left: 31px;
+
+		img {
+			width: 40px;
+			height: auto;
+		}
+	}
+	.company {
+		position: absolute;
+		left: $nav_bar_width;
+
+		.name {
+			font-size: 28px;
+		}
+		.address {
+			color: #9c9b9b;
+		}
+	}
+
+	.user {
+		position: absolute;
+		right: 5px;
+	}
 }

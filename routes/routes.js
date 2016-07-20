@@ -43,13 +43,14 @@ var Router = Mn.AppRouter.extend({
 		this.app.showChildView('app_region', new SignupLayout());
 	},
 	sent: function () {
+		
 		var route = this;
 		this.loadBasicData()
 			.then(function(){
 				route.app.showChildView('app_region', new DashboardLayout());
 			})
 			.catch(function(err){
-				if(err.toString() === "not login") {
+				if(err.toString().indexOf("not login") > -1) {
 					Backbone.history.navigate('/login', true);
 				}
 			});

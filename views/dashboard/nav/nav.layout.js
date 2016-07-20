@@ -9,16 +9,26 @@ var NavLayout = Mn.LayoutView.extend({
 	},
 	template: require('./nav.layout.html'),
 	onRender: function() {
-
+	
 	},
 	events: {
 		'click #sent-link': function (e) {
-			e.preventDefault();
+			// e.preventDefault();
 			alert('sent-link')
 		}
 	}, 
 	onAttach: function () {
 		// exclusive region event, only triggered by parentView.show() method
+		this.markActiveMenuItem();
+	},
+	markActiveMenuItem: function () {
+		var urlFrag = Backbone.history.getFragment();
+		switch (urlFrag) {
+			case 'dashboard':
+			case 'dashboard/sent':
+				$('#sent').addClass('active');
+				break; 
+		}
 	}
 });
 
