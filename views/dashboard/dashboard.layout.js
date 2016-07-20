@@ -4,6 +4,7 @@ var $ = require('jquery');
 var api = require('../../models/_api.js');
 var appData = require('../../routes/_data.js');
 var Nav = require('./nav/nav.layout.js');
+var Header = require('./header/header.layout.js');
 
 var CreateCompanyModal = require('./_create_company_modal/create_company_modal.js');
 
@@ -30,6 +31,7 @@ var DashboardLayout = Mn.LayoutView.extend({
 	},
 	onBeforeShow: function () {
 		this.showChildView('nav', new Nav());
+		this.showChildView('header', new Header());
 	},
 	onShow: function() {
 

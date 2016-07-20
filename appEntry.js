@@ -1,7 +1,10 @@
+
 var $ = require('jquery');
 var Mn = require('backbone.marionette');
 require('bootstrap-loader'); // load bootstrap 3
 require('./scss/style.scss');
+require('file?name=[name].[ext]!./img/favicon.ico');
+require('file?name=[name].[ext]!./img/spider-web.svg');
 var Router = require('./routes/routes.js');
 
 var api = require('./models/_api.js');

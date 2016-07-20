@@ -27,6 +27,9 @@ module.exports = {
 			} else {
 				return request.get('http://localhost:3000/company');
 			}
+		},
+		create: function (company) {
+			return request.post('http://localhost:3000/company', company);
 		}
 	},
 	client: {},

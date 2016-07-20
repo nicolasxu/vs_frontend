@@ -1,7 +1,7 @@
 var Mn = require('backbone.marionette');
 require('backbone.stickit');
 var $ = require('jquery');
-
+var appData = require('../../../routes/_data.js');
 
 var NavLayout = Mn.LayoutView.extend({
 	initialize: function () {
