@@ -32,9 +32,14 @@ module.exports = {
 			return request.post('http://localhost:3000/company', company);
 		}
 	},
+	invoice: {
+		getSentList: function () {
+			return request.get('http://localhost:3000/invoice/sent');
+		}
+	},
 	client: {},
 	vendor: {},
-	request: {},
-	invoice: {},
+	request: {}
+	
 
 };

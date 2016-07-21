@@ -3,7 +3,8 @@ var api = require('./_api.js');
 
 var Company = Backbone.Model.extend({
 	initialize: function () {
-		console.log('initializing Company model...');
+		
+		
 	},
 	create: function () {
 		var companyJson = this.attributes;

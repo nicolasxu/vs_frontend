@@ -14,7 +14,11 @@ var Router = Mn.AppRouter.extend({
 		'login(/)': 'login',     // http://localhost:8080/#/login
 		'signup(/)': 'signup',    // http://localhost:8080/#/signup
 		'dashboard/sent(/)': 'sent',
-		'dashboard(/)': 'sent'
+		'dashboard(/)': 'sent',
+		'dashboard/received(/)': 'received',
+		'dashboard/clients(/)': 'clients',
+		'dashboard/vendors(/)': 'vendors',
+		'dashboard/create(/)': 'create'
 	}, 
 	initialize: function () {
 		var initData = this.getOption('keyInOptions');
@@ -47,7 +51,7 @@ var Router = Mn.AppRouter.extend({
 		var route = this;
 		this.loadBasicData()
 			.then(function(){
-				route.app.showChildView('app_region', new DashboardLayout());
+				route.app.showChildView('app_region', new DashboardLayout({content: 'sent'}));
 			})
 			.catch(function(err){
 				if(err.toString().indexOf("not login") > -1) {
@@ -55,12 +59,25 @@ var Router = Mn.AppRouter.extend({
 				}
 			});
 	},
+	received: function() {
+
+	},
+	clients: function () {
+
+	},
+	vendors: function() {
+
+	},
+	create: function () {
+		// create new invoice
+		
+	},
 	loadBasicData: function () {
 		// 1. load user data if no,
 		return api.user.getInfo()
 			.then(function(result) {
 				if(result.code === 4008) {
-					console.log('loadBasicData, not login');
+
 					appData.isLogin = false; 
 					throw new Error("not login"); 
 				} else {

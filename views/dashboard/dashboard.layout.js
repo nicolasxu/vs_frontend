@@ -5,7 +5,7 @@ var api = require('../../models/_api.js');
 var appData = require('../../routes/_data.js');
 var Nav = require('./nav/nav.layout.js');
 var Header = require('./header/header.layout.js');
-
+var Sent = require('./sent/sent.layout.js');
 var CreateCompanyModal = require('./_create_company_modal/create_company_modal.js');
 
 var DashboardLayout = Mn.LayoutView.extend({
@@ -25,13 +25,26 @@ var DashboardLayout = Mn.LayoutView.extend({
 		this.addRegion('content', '#vs-content-region');
 		this.addRegion('modal', '#vs-modal');
 
-		
-
-
 	},
 	onBeforeShow: function () {
 		this.showChildView('nav', new Nav());
 		this.showChildView('header', new Header());
+		this.showChildView('content', new Sent());
+		
+		switch (this.options.content) {
+			case 'sent': 
+			// this.showChildView('content', new Sent());
+			break;
+			case 'receivved':
+			break;
+			case 'clients':
+			break;
+			case 'vendors':
+			break;
+			case 'create':
+			break;
+		}
+
 	},
 	onShow: function() {
 

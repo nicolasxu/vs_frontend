@@ -41,13 +41,10 @@ var LoginLayout = Mn.LayoutView.extend({
 				.then(function(result) {
 					if(result.code === 2000) {
 						appData.user = result.user;
+						appData.company = result.company;
 						// clear value
 						appData.isLogin = true;
 
-						// api.company.getInfo()
-						// 	.then(function(result){
-						// 		appData.company = result.company;
-						// 	});
 						Backbone.history.navigate('/dashboard', true);
 
 						// naviaget to dash board
