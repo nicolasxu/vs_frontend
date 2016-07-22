@@ -1,3 +1,9 @@
-<div>
-  <span><%- amount %></span>
-</div>
+<span class="column i-no">
+	<%- model.invoiceNumber %>
+</span>
+
+
+<span class="column i-amount"><%- model.amount %></span>
+<span class="column i-to-name"><%- model.to.cName %></span>
+<span class="column i-due-date"><%- model.dueDate %></span>
+<span class="column i-due-date"><%- model.status %></span>

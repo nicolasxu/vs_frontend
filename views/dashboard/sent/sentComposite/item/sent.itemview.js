@@ -8,10 +8,12 @@ var InvoiceItem = Mn.ItemView.extend({
 
 	},
 	tagName: 'li',
+	className: 'list-row', 
 	template: function(modelJson) {
+		console.log(modelJson);
 		var tpl = require('./sent.itemview.html');
 		var tplFunc = _.template(tpl);
-		var result = tplFunc(modelJson);
+		var result = tplFunc({model: modelJson});
 		return result;
 
 	},

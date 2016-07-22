@@ -1,0 +1,37 @@
+$column-width: 18%;
+
+#list-region {
+	.column {
+		display: inline-block;
+		width: $column-width;
+	}
+	
+	.list-header {
+		padding: .75rem;
+		line-height: 1.5;
+		border-top: 1px solid #eceeef;
+		border-bottom: 1px solid #eceeef;
+		font-weight: bold;
+		
+	}
+
+	.list-items {
+		padding-left: 0;
+		.list-row {
+			list-style: none;
+			padding: .75rem;
+			line-height: 1.5;
+			border-top: 1px solid #eceeef;
+
+
+
+
+
+			&:first-child {
+
+			}
+		}
+	}
+}
+
+

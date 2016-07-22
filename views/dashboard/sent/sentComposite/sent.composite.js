@@ -15,16 +15,17 @@ var SentCompositeView = Mn.CompositeView.extend({
 		this.collection = ic;
 		ic.fetch()
 			.catch(function (err) {
+				console.log(err);
 				if(err.result.code === 4008) {
 					// not login
-					Backbone.history.navigate('/login', true);
+					return Backbone.history.navigate('/login', true);
 				}
 			});
 
 	},
 	template: require('./sent.composite.html'),
 	childView: InvoiceItemView,
-	childViewContainer: 'ul.list-content'
+	childViewContainer: 'ul.list-items'
 });
 
 module.exports = SentCompositeView;
