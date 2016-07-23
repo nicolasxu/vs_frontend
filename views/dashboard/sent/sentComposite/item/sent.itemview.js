@@ -10,7 +10,6 @@ var InvoiceItem = Mn.ItemView.extend({
 	tagName: 'li',
 	className: 'list-row', 
 	template: function(modelJson) {
-		console.log(modelJson);
 		var tpl = require('./sent.itemview.html');
 		var tplFunc = _.template(tpl);
 		var result = tplFunc({model: modelJson});
@@ -24,6 +23,18 @@ var InvoiceItem = Mn.ItemView.extend({
 	onShow: function () {
 
 	}
+	// ,
+	// events : {
+	// 	'click .i-checker': 'checkerClicked'
+	// },
+	// ui: {
+	// 	checkboxes: '.i-checker'
+	// },
+	// checkerClicked: function (e) {
+	// 	// console.log(e);
+	// 	console.log(this);
+
+	// }
 });
 
 module.exports = InvoiceItem;

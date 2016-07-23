@@ -3,6 +3,7 @@ require('backbone.stickit');
 var $ = require('jquery');
 
 var SentCompositeView = require('./sentComposite/sent.composite.js');
+var SentCmdLayout = require('./sentCommand/sent.cmd.layout.js');
 
 var SentLayout = Mn.LayoutView.extend({
 	initialize: function() {
@@ -16,6 +17,7 @@ var SentLayout = Mn.LayoutView.extend({
 	},
 	onBeforeShow: function() {
 		this.showChildView('list', new SentCompositeView());
+		this.showChildView('command', new SentCmdLayout());
 	}
 });
 

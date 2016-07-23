@@ -12,6 +12,9 @@ $column-width: 18%;
 		border-top: 1px solid #eceeef;
 		border-bottom: 1px solid #eceeef;
 		font-weight: bold;
+		&:first-child {
+			margin-left: 20px;
+		}
 		
 	}
 
@@ -22,7 +25,13 @@ $column-width: 18%;
 			padding: .75rem;
 			line-height: 1.5;
 			border-top: 1px solid #eceeef;
-
+			
+			.i-checker {
+				margin-right: 10px;
+				input {
+					font-size: 17px;
+				}
+			}
 
 
 
@@ -33,5 +42,6 @@ $column-width: 18%;
 		}
 	}
 }
+
 
 
