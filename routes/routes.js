@@ -18,7 +18,8 @@ var Router = Mn.AppRouter.extend({
 		'dashboard/received(/)': 'received',
 		'dashboard/clients(/)': 'clients',
 		'dashboard/vendors(/)': 'vendors',
-		'dashboard/create(/)': 'create'
+		'dashboard/create(/)': 'create',
+		'*notFound': 'default'
 	}, 
 	initialize: function () {
 		var initData = this.getOption('keyInOptions');
@@ -70,6 +71,17 @@ var Router = Mn.AppRouter.extend({
 	},
 	create: function () {
 		// create new invoice
+		var route = this;
+		this.loadBasicData()
+			.then(function(){
+				route.app.showChildView('app_region', new DashboardLayout({content: 'create'}));
+			})
+			.catch(function(err){
+				if(err.toString().indexOf("not login") > -1) {
+					Backbone.history.navigate('/login', true);
+				}
+			});
+
 		
 	},
 	loadBasicData: function () {

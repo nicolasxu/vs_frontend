@@ -7,6 +7,7 @@ var Nav = require('./nav/nav.layout.js');
 var Header = require('./header/header.layout.js');
 var Sent = require('./sent/sent.layout.js');
 var CreateCompanyModal = require('./_create_company_modal/create_company_modal.js');
+var Create = require('./create/create.layout.js');
 
 var DashboardLayout = Mn.LayoutView.extend({
 	initialize: function () {
@@ -29,20 +30,21 @@ var DashboardLayout = Mn.LayoutView.extend({
 	onBeforeShow: function () {
 		this.showChildView('nav', new Nav());
 		this.showChildView('header', new Header());
-		this.showChildView('content', new Sent());
 		
 		switch (this.options.content) {
 			case 'sent': 
-			// this.showChildView('content', new Sent());
-			break;
-			case 'receivved':
+				this.showChildView('content', new Sent());
+
+				break;
+			case 'received':
 			break;
 			case 'clients':
 			break;
 			case 'vendors':
 			break;
 			case 'create':
-			break;
+				this.showChildView('content', new Create());
+				break;
 		}
 
 	},

@@ -18,7 +18,7 @@ var NavLayout = Mn.LayoutView.extend({
 	},
 	events: {
 		'click #sent-link': function (e) {
-			alert('sent-link')
+
 		}
 	}, 
 	onAttach: function () {
