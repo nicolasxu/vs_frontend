@@ -37,6 +37,11 @@ module.exports = {
 			return request.get('http://localhost:3000/invoice/sent');
 		}
 	},
+	template: {
+		getAll: function () {
+			return request.get('http://localhost:3000/template');
+		}
+	},
 	client: {},
 	vendor: {},
 	request: {}
