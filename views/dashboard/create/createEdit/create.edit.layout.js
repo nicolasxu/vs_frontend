@@ -28,7 +28,7 @@ var EditView = Mn.LayoutView.extend({
 			}
 			// render the 
 			var tpl = thisView.templates[0];
-			this.$el.append(tpl.html);
+			//this.$el.append(tpl.html);
 			$('#invoice-style').remove();
 			var styleElm = $('<style id="invoice-style">').append(tpl.css); 
 			this.$el.append(styleElm);
@@ -36,6 +36,9 @@ var EditView = Mn.LayoutView.extend({
 		});
 	},
 	template: require('./create.edit.layout.html'),
+	tagName: 'div',
+	id: 'invoice-wrapper',
+	className: 'paper',
 	onShow: function () {
 
 	},

@@ -39,7 +39,7 @@ module.exports = {
         loader: 'file?name=[name].[ext]'
       },
       { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' } 
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192&name=[name].[ext]' } 
     ]
 	}
 }

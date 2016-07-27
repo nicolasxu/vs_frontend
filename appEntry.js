@@ -7,6 +7,7 @@ require('./scss/style.scss');
 // require('file?name=[name].[ext]!./img/spider-web.svg');
 require('./img/favicon.ico');
 require('./img//spider-web.svg');
+require('./img/invoice_logo.png'); // invoice logo for testing
 
 var Router = require('./routes/routes.js');
 
