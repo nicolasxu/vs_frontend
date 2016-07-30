@@ -28,11 +28,12 @@ var DashboardLayout = Mn.LayoutView.extend({
 
 	},
 	onBeforeShow: function () {
-		this.showChildView('nav', new Nav());
+		
 		this.showChildView('header', new Header());
 		
 		switch (this.options.content) {
 			case 'sent': 
+				this.showChildView('nav', new Nav());
 				this.showChildView('content', new Sent());
 
 				break;

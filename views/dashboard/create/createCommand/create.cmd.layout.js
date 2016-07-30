@@ -11,11 +11,18 @@ var CreateCmdLayout = Mn.LayoutView.extend({
 			console.log('void invoice triggered, msg: ' + invoiceJson);
 		});
 		cmdChannel.trigger('send', 'on send invoice');
-	}, 
+	},
+	className: 'cmd-wrapper', 
 	template: require('./create.cmd.layout.html'),
 	onBeforeShow: function () {
 
-	}	
+	},
+	events: {
+		'click .goback-btn': function (e) {
+
+			window.history.back();
+		}
+	}
 });
 
 module.exports = CreateCmdLayout; 
