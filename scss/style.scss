@@ -25,28 +25,26 @@ $nav_bar_width: 220px;
 // dashboard layout
 .dashboard {
 	height: 100vh;
-	#vs-header-region {
-		height: 65px;
-		border-bottom: 1px solid rgba(0,0,0,.05);
+
+	#vs-nav-region {
+		.nav-layout {
+
+			float: left; 
+			width: $nav_bar_width;
+			height: 100vh;
+		}
 	}
 	.main-wrapper {
-		position: absolute;
-		top: 65px;
-		bottom: 0;
-		width: 100%;
-		#vs-nav-region {
-			position: fixed;
-			top: 65px;
-			bottom: 0;
-			width: $nav_bar_width;
+		margin-left: $nav_bar_width;
+		height: 100vh;
+		#vs-header-region {
+			height: 65px;
+			border-bottom: 1px solid rgba(0,0,0,.05);
 		}
 		#vs-content-region {
-			// background-color: orange;
-			position: absolute;
-			top: 0;
+			top: 65px;
 			bottom: 0;
-			right: 0;
-			left: $nav_bar_width;
 		}
+		
 	}
 }

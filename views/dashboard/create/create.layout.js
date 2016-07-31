@@ -10,6 +10,7 @@ var CreateLayout = Mn.LayoutView.extend({
 	initialize: function () {
 
 	},
+	className: 'h-center',
 	template: require('./create.layout.html'),
 	onRender: function () {
 		this.addRegion('command', '#create-cmd-region');

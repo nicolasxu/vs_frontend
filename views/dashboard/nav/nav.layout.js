@@ -12,6 +12,7 @@ var NavLayout = Mn.LayoutView.extend({
 	bindings: {
 
 	},
+	className: 'nav-layout',
 	template: require('./nav.layout.html'),
 	onRender: function() {
 		
