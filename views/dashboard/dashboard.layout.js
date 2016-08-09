@@ -35,6 +35,11 @@ var DashboardLayout = Mn.LayoutView.extend({
 			case 'sent': 
 				this.showChildView('nav', new Nav());
 				this.showChildView('content', new Sent());
+				if(this.options.showNav) {
+					this.showNav(true);
+				} else {
+					this.showNav(false);
+				}
 
 				break;
 			case 'received':
@@ -44,7 +49,13 @@ var DashboardLayout = Mn.LayoutView.extend({
 			case 'vendors':
 			break;
 			case 'create':
+				this.showChildView('nav', new Nav());
 				this.showChildView('content', new Create());
+				if(this.options.showNav) {
+					this.showNav(true);
+				} else {
+					this.showNav(false);
+				}
 				break;
 		}
 
@@ -63,6 +74,15 @@ var DashboardLayout = Mn.LayoutView.extend({
 	},
 	onDestroy: function () {
 
+
+	}, 
+	showNav: function (showNav) {
+		var $target = $('.main-wrapper', this.$el);
+		if(showNav) {
+			$target.css('margin-left', '200px;');
+		} else {
+			$target.css('margin-left', '0');
+		}
 
 	}
 });

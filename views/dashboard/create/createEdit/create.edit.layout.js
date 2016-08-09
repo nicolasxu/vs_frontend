@@ -3,6 +3,9 @@ require('backbone.stickit');
 var $ = require('jquery');
 var _ = require('lodash');
 var Template = require('../../../../models/template.model.js');
+var ClientDialog = require('../client.dialog/client.dialog.js');
+
+
 var EditView = Mn.LayoutView.extend({
 	initialize: function () {
 		var thisView = this;
@@ -46,6 +49,17 @@ var EditView = Mn.LayoutView.extend({
 		// render ready
 		this.renderEventTriggered = true; 
 		this.trigger('showTemplate');
+		
+	},
+	events: {
+		'click #client-dialog-trigger': function (e) {
+			$(window).trigger('click.clientDialog'); // close existing dialog
+			e.stopPropagation();
+			this.clientDialog = new ClientDialog({event:e});
+			this.clientDialog.trigger('showDialog');
+
+			console.log(e);
+		}
 	}
 });
 

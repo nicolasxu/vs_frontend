@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c869cd257babd27946b7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b4515666fd10a84655f1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -21337,7 +21337,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".hv-center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.hv-center-no-shift {\n  position: absolute;\n  top: 30%;\n  left: 50%;\n  transform: translate(-50%, 0); }\n\n.v-center {\n  position: absolute;\n  top: 50%;\n  transform: translate(0, -50%); }\n\n#vs-nav-region li {\n  list-style: none; }\n\n#vs-nav-region ul {\n  padding-left: 0; }\n\n#vs-nav-region .new-invoice-wrapper {\n  margin-top: 30px; }\n  #vs-nav-region .new-invoice-wrapper .btn-wrapper {\n    padding-left: 30px; }\n    #vs-nav-region .new-invoice-wrapper .btn-wrapper .new-btn {\n      padding-left: 40px;\n      padding-right: 40px; }\n\n#vs-nav-region .menu-list {\n  padding-left: 0;\n  margin-top: 30px; }\n  #vs-nav-region .menu-list .menu-item {\n    padding-left: 10px;\n    list-style: none;\n    transition: .3s ease all; }\n    #vs-nav-region .menu-list .menu-item:hover {\n      background-color: #eee; }\n    #vs-nav-region .menu-list .menu-item a {\n      color: #2586ff;\n      display: block;\n      font-weight: 300;\n      padding: 10px 20px 15px;\n      font-size: 18px;\n      letter-spacing: .5px;\n      line-height: 1;\n      text-decoration: none; }\n    #vs-nav-region .menu-list .menu-item.active {\n      background-color: #44c3f0; }\n      #vs-nav-region .menu-list .menu-item.active a {\n        color: white; }\n\n#vs-header-region {\n  position: relative;\n  z-index: 1; }\n  #vs-header-region .vs-logo {\n    float: left;\n    margin-top: 12px;\n    margin-left: 31px; }\n    #vs-header-region .vs-logo img {\n      width: 40px;\n      height: auto; }\n  #vs-header-region .company {\n    position: absolute;\n    left: 220px; }\n    #vs-header-region .company .name {\n      font-size: 28px; }\n    #vs-header-region .company .address {\n      color: #9c9b9b; }\n  #vs-header-region .user {\n    position: absolute;\n    right: 5px; }\n\n#list-region .column {\n  display: inline-block;\n  width: 18%; }\n\n#list-region .list-header {\n  padding: .75rem;\n  line-height: 1.5;\n  border-top: 1px solid #eceeef;\n  border-bottom: 1px solid #eceeef;\n  font-weight: bold; }\n  #list-region .list-header:first-child {\n    margin-left: 20px; }\n\n#list-region .list-items {\n  padding-left: 0; }\n  #list-region .list-items .list-row {\n    list-style: none;\n    padding: .75rem;\n    line-height: 1.5;\n    border-top: 1px solid #eceeef; }\n    #list-region .list-items .list-row .i-checker {\n      margin-right: 10px; }\n      #list-region .list-items .list-row .i-checker input {\n        font-size: 17px; }\n\n#command-region {\n  margin-top: 15px;\n  margin-bottom: 15px; }\n  #command-region .pagination {\n    float: right;\n    margin: 6px 10px 0 0; }\n\n#invoice-wrapper .invoice {\n  font-size: 40px; }\n\n#invoice-wrapper .invoice-table {\n  width: 100%; }\n\n#app-container {\n  height: 100vh; }\n\n.signup-box {\n  width: 400px; }\n\n.login-box {\n  width: 400px; }\n  .login-box .login-return-msg-box {\n    padding: 15px; }\n\n.dashboard {\n  height: 100vh; }\n  .dashboard #vs-header-region {\n    height: 65px;\n    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }\n  .dashboard .main-wrapper {\n    position: absolute;\n    top: 65px;\n    bottom: 0;\n    width: 100%; }\n    .dashboard .main-wrapper #vs-nav-region {\n      position: fixed;\n      top: 65px;\n      bottom: 0;\n      width: 220px; }\n    .dashboard .main-wrapper #vs-content-region {\n      position: absolute;\n      top: 0;\n      bottom: 0;\n      right: 0;\n      left: 220px; }\n", ""]);
+	exports.push([module.id, ".hv-center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); }\n\n.hv-center-no-shift {\n  position: absolute;\n  top: 30%;\n  left: 50%;\n  transform: translate(-50%, 0); }\n\n.v-center {\n  position: absolute;\n  top: 50%;\n  transform: translate(0, -50%); }\n\n.h-center {\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0); }\n\n.paper {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }\n\n#vs-nav-region li {\n  list-style: none; }\n\n#vs-nav-region ul {\n  padding-left: 0; }\n\n#vs-nav-region .new-invoice-wrapper {\n  margin-top: 30px; }\n  #vs-nav-region .new-invoice-wrapper .btn-wrapper {\n    padding-left: 30px; }\n    #vs-nav-region .new-invoice-wrapper .btn-wrapper .new-btn {\n      padding-left: 40px;\n      padding-right: 40px; }\n\n#vs-nav-region .menu-list {\n  padding-left: 0;\n  margin-top: 30px; }\n  #vs-nav-region .menu-list .menu-item {\n    padding-left: 10px;\n    list-style: none;\n    transition: .3s ease all; }\n    #vs-nav-region .menu-list .menu-item:hover {\n      background-color: #eee; }\n    #vs-nav-region .menu-list .menu-item a {\n      color: #2586ff;\n      display: block;\n      font-weight: 300;\n      padding: 10px 20px 15px;\n      font-size: 18px;\n      letter-spacing: .5px;\n      line-height: 1;\n      text-decoration: none; }\n    #vs-nav-region .menu-list .menu-item.active {\n      background-color: #44c3f0; }\n      #vs-nav-region .menu-list .menu-item.active a {\n        color: white; }\n\n#vs-header-region {\n  position: relative;\n  z-index: 1; }\n  #vs-header-region .vs-logo {\n    float: left;\n    margin-top: 12px;\n    margin-left: 31px; }\n    #vs-header-region .vs-logo img {\n      width: 40px;\n      height: auto; }\n  #vs-header-region .company {\n    position: absolute;\n    left: 220px; }\n    #vs-header-region .company .name {\n      font-size: 28px; }\n    #vs-header-region .company .address {\n      color: #9c9b9b; }\n  #vs-header-region .user {\n    position: absolute;\n    right: 5px; }\n\n#list-region .column {\n  display: inline-block;\n  width: 18%; }\n\n#list-region .list-header {\n  padding: .75rem;\n  line-height: 1.5;\n  border-top: 1px solid #eceeef;\n  border-bottom: 1px solid #eceeef;\n  font-weight: bold; }\n  #list-region .list-header:first-child {\n    margin-left: 20px; }\n\n#list-region .list-items {\n  padding-left: 0; }\n  #list-region .list-items .list-row {\n    list-style: none;\n    padding: .75rem;\n    line-height: 1.5;\n    border-top: 1px solid #eceeef; }\n    #list-region .list-items .list-row .i-checker {\n      margin-right: 10px; }\n      #list-region .list-items .list-row .i-checker input {\n        font-size: 17px; }\n\n#command-region, #create-cmd-region {\n  margin-top: 15px;\n  margin-bottom: 15px; }\n  #command-region .pagination, #create-cmd-region .pagination {\n    float: right;\n    margin: 6px 10px 0 0; }\n\n#invoice-wrapper {\n  width: 720px;\n  min-height: 880px;\n  border: 1px solid #eee;\n  border-bottom: 2px solid orange;\n  padding: 10px;\n  position: relative;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  color: #333333; }\n  #invoice-wrapper .row {\n    display: block;\n    margin: 0; }\n  #invoice-wrapper .logo {\n    margin-bottom: 40px; }\n    #invoice-wrapper .logo img {\n      width: 80px;\n      height: auto; }\n  #invoice-wrapper .invoice {\n    font-size: 40px;\n    margin-bottom: 40px;\n    font-weight: bold;\n    color: #5d5b5b; }\n  #invoice-wrapper .to-text {\n    font-size: 20px;\n    color: #a29d9d; }\n  #invoice-wrapper .to-client {\n    position: relative;\n    overflow: visible;\n    display: inline-block;\n    font-size: 14px;\n    border: 4px dotted transparent; }\n    #invoice-wrapper .to-client span {\n      display: inline-block; }\n    #invoice-wrapper .to-client:hover {\n      background-color: #d6d6cf;\n      cursor: pointer;\n      border: 4px dotted grey; }\n  #invoice-wrapper .meta-data {\n    float: right;\n    text-align: right;\n    font-size: 14px;\n    border: 4px dotted transparent; }\n    #invoice-wrapper .meta-data:hover {\n      background-color: #d6d6cf;\n      cursor: pointer;\n      border: 4px dotted grey; }\n  #invoice-wrapper .invoice-table {\n    width: 100%;\n    border: 4px solid transparent; }\n    #invoice-wrapper .invoice-table:hover {\n      background-color: #d6d6cf;\n      cursor: pointer;\n      border: 4px dotted grey; }\n    #invoice-wrapper .invoice-table thead {\n      border-bottom: 1px solid #bfbfbf; }\n    #invoice-wrapper .invoice-table tbody {\n      font-size: 14px;\n      line-height: 1.5em;\n      font-family: \"Times New Roman\", Times, serif; }\n  #invoice-wrapper .total {\n    position: relative;\n    margin-top: 80px;\n    overflow: hidden; }\n    #invoice-wrapper .total .text {\n      float: left;\n      margin-left: 498px;\n      font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n      font-size: 14px;\n      font-weight: bold; }\n    #invoice-wrapper .total .amount {\n      float: left;\n      padding-left: 30px; }\n  #invoice-wrapper .payment-info .title {\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 14px;\n    font-weight: bold; }\n  #invoice-wrapper .payment-info .message {\n    font-size: 12px;\n    font-family: \"Times New Roman\", Times, serif;\n    border: 4px solid transparent; }\n    #invoice-wrapper .payment-info .message:hover {\n      background-color: #d6d6cf;\n      cursor: pointer;\n      border: 4px dotted grey; }\n  #invoice-wrapper .from-address {\n    position: absolute;\n    bottom: 0;\n    right: 10px;\n    margin-top: 40px;\n    text-align: right;\n    font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n    font-size: 11px; }\n\n.dashboard {\n  height: 100vh; }\n  .dashboard #vs-nav-region .nav-layout {\n    float: left;\n    width: 220px;\n    height: 100vh; }\n  .dashboard .main-wrapper {\n    margin-left: 220px;\n    height: 100vh;\n    padding-left: 5px; }\n    .dashboard .main-wrapper #vs-header-region {\n      height: 65px;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }\n    .dashboard .main-wrapper #vs-content-region {\n      top: 65px;\n      bottom: 0; }\n\n.client-dialog {\n  position: absolute;\n  z-index: 1100;\n  top: -20px;\n  width: 300px;\n  background-color: white;\n  border: 1px dotted grey; }\n\n#app-container {\n  height: 100vh; }\n\n.signup-box {\n  width: 400px; }\n\n.login-box {\n  width: 400px; }\n  .login-box .login-return-msg-box {\n    padding: 15px; }\n", ""]);
 	
 	// exports
 
@@ -21372,7 +21372,7 @@
 	var appData = __webpack_require__(44);
 	var api = __webpack_require__(42);
 	
-	var AppLayout = __webpack_require__(84);
+	var AppLayout = __webpack_require__(86);
 	
 	var Router = Mn.AppRouter.extend({
 		routes: {
@@ -28325,7 +28325,7 @@
 		initialize: function () {
 		},
 		// el: '#app-container',
-		template: __webpack_require__(83),
+		template: __webpack_require__(85),
 		regions: {
 			/* Building region is only trigger during the new */
 		},
@@ -28340,11 +28340,12 @@
 	
 		},
 		onBeforeShow: function () {
-			this.showChildView('nav', new Nav());
+			
 			this.showChildView('header', new Header());
 			
 			switch (this.options.content) {
 				case 'sent': 
+					this.showChildView('nav', new Nav());
 					this.showChildView('content', new Sent());
 	
 					break;
@@ -28398,6 +28399,7 @@
 		bindings: {
 	
 		},
+		className: 'nav-layout',
 		template: __webpack_require__(57),
 		onRender: function() {
 			
@@ -45280,7 +45282,8 @@
 		initialize: function () {
 	
 		},
-		template: __webpack_require__(82),
+		className: 'h-center',
+		template: __webpack_require__(84),
 		onRender: function () {
 			this.addRegion('command', '#create-cmd-region');
 			this.addRegion('edit', '#create-edit-region');
@@ -45315,11 +45318,18 @@
 				console.log('void invoice triggered, msg: ' + invoiceJson);
 			});
 			cmdChannel.trigger('send', 'on send invoice');
-		}, 
+		},
+		className: 'cmd-wrapper', 
 		template: __webpack_require__(78),
 		onBeforeShow: function () {
 	
-		}	
+		},
+		events: {
+			'click .goback-btn': function (e) {
+	
+				window.history.back();
+			}
+		}
 	});
 	
 	module.exports = CreateCmdLayout; 
@@ -45342,7 +45352,7 @@
 /* 78 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default\">Send</button>\n\t  <button type=\"button\" class=\"btn btn-default\">Templates</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t</div>\n\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default\">Void</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t</div>\n\n\t<div class=\"btn-group btn-group-xs pagination\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default\">Prev</button>\n\t  <button type=\"button\" class=\"btn btn-default\">Next</button>\n\n\t</div>\n\t\n</div>"
+	module.exports = "<div>\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default goback-btn\">Back</button>\n\t</div>\n\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default\">Send</button>\n\t  <button type=\"button\" class=\"btn btn-default\">Templates</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t</div>\n\n\t<div class=\"btn-group\" role=\"group\" aria-label=\"...\">\n\t  <button type=\"button\" class=\"btn btn-default\">Void</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t  <button type=\"button\" class=\"btn btn-default\">---</button>\n\t</div>\n\t\n</div>"
 
 /***/ },
 /* 79 */
@@ -45353,6 +45363,9 @@
 	var $ = __webpack_require__(4);
 	var _ = __webpack_require__(64);
 	var Template = __webpack_require__(80);
+	var ClientDialog = __webpack_require__(81);
+	
+	
 	var EditView = Mn.LayoutView.extend({
 		initialize: function () {
 			var thisView = this;
@@ -45378,16 +45391,17 @@
 				}
 				// render the 
 				var tpl = thisView.templates[0];
-				this.$el.append(tpl.html);
+				//this.$el.append(tpl.html);
 				$('#invoice-style').remove();
 				var styleElm = $('<style id="invoice-style">').append(tpl.css); 
 				this.$el.append(styleElm);
 				// $('body').append(styleElm);
 			});
 		},
-		template: __webpack_require__(81),
+		template: __webpack_require__(83),
 		tagName: 'div',
 		id: 'invoice-wrapper',
+		className: 'paper',
 		onShow: function () {
 	
 		},
@@ -45395,6 +45409,17 @@
 			// render ready
 			this.renderEventTriggered = true; 
 			this.trigger('showTemplate');
+			
+		},
+		events: {
+			'click #client-dialog-trigger': function (e) {
+				$(window).trigger('click.clientDialog'); // close existing dialog
+				e.stopPropagation();
+				this.clientDialog = new ClientDialog({event:e});
+				this.clientDialog.trigger('showDialog');
+	
+				console.log(e);
+			}
 		}
 	});
 	
@@ -45422,24 +45447,89 @@
 
 /***/ },
 /* 81 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div>\n\n\tthis is create edit section\n\n\n\t<div class=\"logo\">\n\t\tthis is logo\n\t\t<img src=\"./invoice-logo.png\" alt=\"this is invoice logo\">\n\t</div>\n\t<div class=\"invoice\">\n\t\tINVOICE\n\t</div>\n\t<address class=\"to-address\">\n\t\t<div class=\"name\">\n\t\t\tABA Legal Service LLC\n\t\t</div>\n\t\t<div class=\"line1\">\n\t\t\t4587 Broad Street\n\t\t</div>\n\t\t<div class=\"city\">\n\t\t\tUrbandale\n\t\t</div>\n\t\t<div class=\"state\">\n\t\t\tIA\n\t\t</div>\n\t\t<div class=\"zip\">\n\t\t\t50322\n\t\t</div>\n\t\t<div class=\"country\">\n\t\t\tU.S.\n\t\t</div>\n\t</address>\n\t<div class=\"meta-data\">\n\t\t<div class=\"row\">\n\t\t\tInvoice number:\n\t\t\t<div class=\"invoice-number\">\n\t\t\t\t45\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\tInvoice date:\n\t\t\t<div class=\"invoice-date\">\n\t\t\t\t2016/07/21\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\tDue date: \n\t\t\t<div class=\"due-date\">\n\t\t\t\t2016/08/21\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<!-- item table -->\n\t<table class=\"invoice-table\">\n\t\t<!-- <caption>table title and/or explanatory text</caption> -->\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th>WHAT?</th>\n\t\t\t\t<th>UNIT?</th>\n\t\t\t\t<th>PER UNIT</th>\n\t\t\t\t<th>HOW MANY?</th>\n\t\t\t\t<th>AMOUNT?</th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td>Sketches and ideas</td>\n\t\t\t\t<td>Hourly basis</td>\n\t\t\t\t<td>$50</td>\n\t\t\t\t<td>4</td>\n\t\t\t\t<td>$200</td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n\n\t<div class=\"total\">\n\t\tTotal: \n\t\t<span>$45.23</span>\n\t</div>\n\n\t<div class=\"payment-info\">\n\t\t<div class=\"title\">\n\t\t\tPayment information:\n\t\t</div>\n\t\t<div class=\"message\">\n\t\t\tPlease pay it online, or sending paper check to \n\t\t\tbusiness address\n\t\t</div>\n\t</div>\n\n\t<div class=\"from-address\">\n\t\t<span class=\"name\">ABA Legal Service LLC</span>\n\t\t<span class=\"phone\">(+1) 619 402 2447 </span>\n\t\t<span class=\"email\">hei@abalegal.com</span>\n\t\t<address>\n\t\t\t7004 Ramblewood Dr., Charleston, SC 29406\n\t\t</address>\n\t</div>\n\n\t<style>\n\n\t\t#invoice-wrapper {\n\t\t\t.invoice {\n\t\t\t\tfont-size: 40px;\n\t\t\t}\n\n\t\t}\n\t\t\n\t</style>\n\t\n\t\n</div>"
+	var Mn = __webpack_require__(5);
+	__webpack_require__(41);
+	var $ = __webpack_require__(4);
+	var _ = __webpack_require__(64);
+	
+	
+	var ClientDialogLayout = Mn.LayoutView.extend({
+		initialize: function () {
+			this.on('showDialog', this.onShowDialog);
+			this.on('hideDialog', this.onHideDialog);
+	
+		},
+		className: 'client-dialog',
+		template: __webpack_require__(82),
+		onRender: function () {
+			var thisDialog = this;
+			$(window).on('click.clientDialog', function () {
+				thisDialog.trigger('hideDialog');
+				console.log('hideDialog triggered');
+				$(window).off('click.clientDialog');
+			});
+	
+			var ss = $(this.options.event.target).closest('#client-dialog-trigger');
+			var width = ss.width();
+			var height = ss.height();
+	
+			var dialogWidth = this.$el.width();
+			var dialogHeight = this.$el.height();
+	
+			this.$el.css({transform: 'translateY(-100%)'});
+		
+		},	
+		onBeforeShow: function () {
+	
+		},
+		events: {
+			'click .form-horizontal': function (e) {
+				e.stopPropagation();
+	
+			}
+		},
+		onShowDialog: function () {
+			var renderResult = this.render().el;
+	
+			$(this.options.event.target).closest('#client-dialog-trigger').append(renderResult)
+		},
+		onHideDialog: function () {
+	
+			this.$el.remove(); // remove itself from the dom.
+			// this.$el.empty(); // empty() empty the children, not itself. 
+		}
+	});
+	
+	module.exports = ClientDialogLayout;
 
 /***/ },
 /* 82 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n\tThis is create invoice layout\n\n\t<div id=\"create-cmd-region\">\n\t\t\n\t</div>\n\t<div id=\"create-edit-region\">\n\t\t\n\t</div>\n\n</div>"
+	module.exports = "<div>\n  <form class=\"form-horizontal\">\n    <div class=\"form-group\">\n      <label for=\"inputEmail3\" class=\"col-sm-2 control-label\">Email</label>\n      <div class=\"col-sm-10\">\n        <input type=\"email\" class=\"form-control\" id=\"inputEmail3\" placeholder=\"Email\">\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <label for=\"inputPassword3\" class=\"col-sm-2 control-label\">Password</label>\n      <div class=\"col-sm-10\">\n        <input type=\"password\" class=\"form-control\" id=\"inputPassword3\" placeholder=\"Password\">\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <div class=\"col-sm-offset-2 col-sm-10\">\n        <div class=\"checkbox\">\n          <label>\n            <input type=\"checkbox\"> Remember me\n          </label>\n        </div>\n      </div>\n    </div>\n    <div class=\"form-group\">\n      <div class=\"col-sm-offset-2 col-sm-10\">\n        <button type=\"submit\" class=\"btn btn-default\">Sign in</button>\n      </div>\n    </div>\n  </form>\n</div>\n"
 
 /***/ },
 /* 83 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n\t<div class=\"dashboard\">\n\t\t<header id=\"vs-header-region\" class=\"\">\n\t\t\tvitaSpider header\n\t\t</header><!-- /header -->\n\t\t<main class=\"main-wrapper\">\n\t\t\t<nav id=\"vs-nav-region\">\n\t\t\t<!-- nav menu goes here -->\n\t\t\t</nav>\n\t\t\t<div id=\"vs-content-region\">\n\t\t\t\t<div>\n\t\t\t\t\tThis is content\n\t\t\t\t\t\t\n\n\n\n\n\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</main>\n\t\t<div id=\"vs-modal\">\n\t\t\t\n\t\t</div>\n\t</div>\n</div>"
+	module.exports = "<div>\n\t<div class=\"logo\">\n\t\t<img src=\"./invoice_logo.png\" alt=\"this is invoice logo\">\n\t</div>\n\t<div class=\"invoice\">\n\t\tINVOICE\n\t</div>\n\t<div class=\"to-text\">\n\t\t\tTo:\n\t</div>\n\t<address class=\"to-client\" id=\"client-dialog-trigger\">\n\t\t<div class=\"row\">\n\t\t\t<span class=\"name\">\n\t\t\t\tABA Legal Service LLC\n\t\t\t</span>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<span class=\"line1\">\n\t\t\t\t4587 Broad Street\n\t\t\t</span>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<span class=\"city\">\n\t\t\t\tUrbandale\n\t\t\t</span>\n\t\t\t<span class=\"state\">\n\t\t\t\tIA\n\t\t\t</span>\n\t\t\t<span class=\"zip\">\n\t\t\t\t50322\n\t\t\t</span>\n\t\t\t<span class=\"country\">\n\t\t\t\tU.S.\n\t\t\t</span>\n\t\t</div>\n\t</address>\n\t<div class=\"meta-data\" id=\"meta-dialog-trigger\">\n\t\t<div class=\"row\">\n\t\t\tInvoice number:\n\t\t\t<span class=\"invoice-number\">\n\t\t\t\t45\n\t\t\t</span>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\tInvoice date:\n\t\t\t<span class=\"invoice-date\">\n\t\t\t\t2016/07/21\n\t\t\t</span>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\tDue date: \n\t\t\t<span class=\"due-date\">\n\t\t\t\t2016/08/21\n\t\t\t</span>\n\t\t</div>\n\t</div>\n\t<!-- item table -->\n\t<table class=\"invoice-table\" id=\"itemtable-dialog-trigger\">\n\t\t<!-- <caption>table title and/or explanatory text</caption> -->\n\t\t<col style=\"width:50%\">\n\t\t<col style=\"width:20%\">\n\t\t<col style=\"width:10%\">\n\t\t<col style=\"width:10%\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th>WHAT?</th>\n\t\t\t\t<th>$ / UNIT</th>\n\t\t\t\t<th>HOW MANY?</th>\n\t\t\t\t<th>AMOUNT?</th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td>Sketches and ideas</td>\n\t\t\t\t<td>50/Hour</td>\n\t\t\t\t<td>4</td>\n\t\t\t\t<td>$200</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t\t<td>Web design</td>\n\t\t\t\t<td>800/Project</td>\n\t\t\t\t<td>1</td>\n\t\t\t\t<td>$800</td>\n\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n\n\t<div class=\"total\">\n\t\t<span class=\"text\">TOTAL: </span>\n\t\t<span class=\"amount\">$45.23</span>\n\t</div>\n\n\t<div class=\"payment-info\" id=\"comment-dialog-trigger\">\n\t\t<div class=\"title\">\n\t\t\tPayment information:\n\t\t</div>\n\t\t<div class=\"message\">\n\t\t\tPlease pay it online, or sending paper check to \n\t\t\tbusiness address\n\t\t</div>\n\t</div>\n\n\t<div class=\"from-address\">\n\t\t<div class=\"row\">\n\t\t\t<span> FROM: </span>\n\t\t</div>\n\t\t<span class=\"name\">ABA Legal Service LLC</span>\n\t\t<span class=\"phone\">(+1) 619 402 2447 </span>\n\t\t<span class=\"email\">hei@abalegal.com</span>\n\t\t<address>\n\t\t\t7004 Ramblewood Dr., Charleston, SC 29406\n\t\t</address>\n\t</div>\n\n\t<style>\n\n\t\t#invoice-wrapper {\n\t\t\t.invoice {\n\t\t\t\tfont-size: 40px;\n\t\t\t}\n\n\t\t}\n\t\t\n\t</style>\n\t\n\t\n</div>"
 
 /***/ },
 /* 84 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>\n\n\t<div id=\"create-cmd-region\">\n\t\t\n\t</div>\n\t<div id=\"create-edit-region\" >\n\t\t\n\t</div>\n\n</div>"
+
+/***/ },
+/* 85 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>\n\t<div class=\"dashboard\">\n\t\t<nav id=\"vs-nav-region\">\n\t\t\t<!-- region  -->\n\t\t</nav>\n\t\t<main class=\"main-wrapper\">\n\t\t\t<header id=\"vs-header-region\" class=\"\">\n\t\t\t\t<!-- region -->\n\t\t\t</header>\n\n\t\t\t<div id=\"vs-content-region\">\n\t\t\t\t<!-- region -->\n\t\t\t</div>\n\t\t</main>\n\t\t<div id=\"vs-modal\">\n\t\t\t<!-- region -->\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ },
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var Mn = __webpack_require__(5);
@@ -45453,7 +45543,7 @@
 	
 		},
 		el: 'body',
-		template: __webpack_require__(85),
+		template: __webpack_require__(87),
 		regions: {
 			app_region: '#app-region'
 		}
@@ -45462,7 +45552,7 @@
 	module.exports = AppLayout;
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\n\t<div id=\"app-region\">\n\t\t\n\t</div>\n</div>"

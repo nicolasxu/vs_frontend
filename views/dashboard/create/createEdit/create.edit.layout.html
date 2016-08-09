@@ -1,15 +1,14 @@
 <div>
-	<div class="logo">
+<!-- 	<div class="logo">
 		<img src="./invoice_logo.png" alt="this is invoice logo">
-	</div>
+	</div> -->
 	<div class="invoice">
 		INVOICE
 	</div>
 	<div class="to-text">
 			To:
 	</div>
-	<address class="to-address">
-
+	<address class="to-client" id="client-dialog-trigger">
 		<div class="row">
 			<span class="name">
 				ABA Legal Service LLC
@@ -35,7 +34,7 @@
 			</span>
 		</div>
 	</address>
-	<div class="meta-data">
+	<div class="meta-data" id="meta-dialog-trigger">
 		<div class="row">
 			Invoice number:
 			<span class="invoice-number">
@@ -56,7 +55,7 @@
 		</div>
 	</div>
 	<!-- item table -->
-	<table class="invoice-table">
+	<table class="invoice-table" id="itemtable-dialog-trigger">
 		<!-- <caption>table title and/or explanatory text</caption> -->
 		<col style="width:50%">
 		<col style="width:20%">
@@ -92,7 +91,7 @@
 		<span class="amount">$45.23</span>
 	</div>
 
-	<div class="payment-info">
+	<div class="payment-info" id="comment-dialog-trigger">
 		<div class="title">
 			Payment information:
 		</div>

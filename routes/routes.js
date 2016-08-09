@@ -52,7 +52,7 @@ var Router = Mn.AppRouter.extend({
 		var route = this;
 		this.loadBasicData()
 			.then(function(){
-				route.app.showChildView('app_region', new DashboardLayout({content: 'sent'}));
+				route.app.showChildView('app_region', new DashboardLayout({content: 'sent', showNav: true}));
 			})
 			.catch(function(err){
 				if(err.toString().indexOf("not login") > -1) {
@@ -74,7 +74,7 @@ var Router = Mn.AppRouter.extend({
 		var route = this;
 		this.loadBasicData()
 			.then(function(){
-				route.app.showChildView('app_region', new DashboardLayout({content: 'create'}));
+				route.app.showChildView('app_region', new DashboardLayout({content: 'create', showNav: true}));
 			})
 			.catch(function(err){
 				if(err.toString().indexOf("not login") > -1) {

@@ -28,6 +28,7 @@
 		margin-bottom: 40px;
 	}
 	.invoice {
+		margin-top: 50px;
 		font-size: 40px;
 		margin-bottom: 40px;
 		font-weight: bold;
@@ -39,7 +40,9 @@
 		color: #a29d9d;
 	}
 
-	.to-address {
+	.to-client {
+		position: relative;
+		overflow: visible; 
 		display: inline-block;
 		font-size: 14px;
 		border: 4px dotted transparent; 
@@ -62,11 +65,7 @@
 		border: 4px dotted transparent; 
 		&:hover {
 			@include content-hover();
-
 		}
-
-
-
 	}
 
 	.invoice-table {

@@ -1,11 +1,12 @@
-$nav_bar_width: 220px; 
+$nav_bar_width: 200px; 
 @import './utilities.scss';
-@import './nav_region.scss';
+@import './dashboard.nav.scss';
 @import './dashboard.header.scss';
-@import './sent-list.scss';
-@import './sent-cmd.scss';
+@import './dashboard.sent.list.scss';
+@import './dashboard.sent.cmd.scss';
 @import './invoice.scss';
-
+@import './dashboard_layout.scss';
+@import './client-dialog.scss';
 
 #app-container {
 	height: 100vh;
@@ -22,29 +23,3 @@ $nav_bar_width: 220px;
 	}
 }
 
-// dashboard layout
-.dashboard {
-	height: 100vh;
-
-	#vs-nav-region {
-		.nav-layout {
-
-			float: left; 
-			width: $nav_bar_width;
-			height: 100vh;
-		}
-	}
-	.main-wrapper {
-		margin-left: $nav_bar_width;
-		height: 100vh;
-		#vs-header-region {
-			height: 65px;
-			border-bottom: 1px solid rgba(0,0,0,.05);
-		}
-		#vs-content-region {
-			top: 65px;
-			bottom: 0;
-		}
-		
-	}
-}
