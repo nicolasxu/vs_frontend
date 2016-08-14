@@ -1,5 +1,6 @@
+$invoice-width: 720px;
 #invoice-wrapper {
-	width: 720px;
+	width: $invoice-width;
 	min-height: 880px; 
 	border: 1px solid #eee;
 	border-bottom: 2px solid orange;

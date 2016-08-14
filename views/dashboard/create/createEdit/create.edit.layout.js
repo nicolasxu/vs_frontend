@@ -3,7 +3,7 @@ require('backbone.stickit');
 var $ = require('jquery');
 var _ = require('lodash');
 var Template = require('../../../../models/template.model.js');
-var ClientDialog = require('../client.dialog/client.dialog.js');
+var ClientEditDialog = require('../client.dialog/client.dialog.js');
 
 
 var EditView = Mn.LayoutView.extend({
@@ -35,7 +35,7 @@ var EditView = Mn.LayoutView.extend({
 			$('#invoice-style').remove();
 			var styleElm = $('<style id="invoice-style">').append(tpl.css); 
 			this.$el.append(styleElm);
-			// $('body').append(styleElm);
+
 		});
 	},
 	template: require('./create.edit.layout.html'),
@@ -51,14 +51,18 @@ var EditView = Mn.LayoutView.extend({
 		this.trigger('showTemplate');
 		
 	},
+	onAttach: function (e) {
+		// - event only for region
+		// - called after this view and its children are attached to DOM.
+
+		this.clientEditDialog = new ClientEditDialog();
+		this.clientEditDialog.trigger('append');
+	},
 	events: {
 		'click #client-dialog-trigger': function (e) {
-			$(window).trigger('click.clientDialog'); // close existing dialog
+			$('body').trigger('click'); // close existing dialog
 			e.stopPropagation();
-			this.clientDialog = new ClientDialog({event:e});
-			this.clientDialog.trigger('showDialog');
-
-			console.log(e);
+			this.clientEditDialog.trigger('showDialog');
 		}
 	}
 });
